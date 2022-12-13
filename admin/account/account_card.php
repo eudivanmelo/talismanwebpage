@@ -106,7 +106,7 @@
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
         <div class="modal-content">
             <div class="modal-header">
-                <h1 class="modal-title fs-5" id="staticBackdropLabel">ACCOUNT UPDATE [ID: 1]</h1>
+                <h1 class="modal-title fs-5">ACCOUNT UPDATE</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
 
@@ -117,15 +117,15 @@
 
                 <!-- Form -->
                 <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="editUsername" value="Eudivan" placeholder="Username">
+                    <input type="text" class="form-control" id="editUsername" placeholder="Username">
                     <label for="editUsername">Username</label>
                 </div>
                 <div class="form-floating mb-3">
-                    <input type="email" class="form-control" id="editEmail" value="eudivan44@gmail.com" placeholder="Email">
+                    <input type="email" class="form-control" id="editEmail" placeholder="Email">
                     <label for="editEmail">Email</label>
                 </div>
                 <div class="form-floating mb-3">
-                    <input type="password" class="form-control" id="editPassword" value="11031997" placeholder="Password">
+                    <input type="password" class="form-control" id="editPassword" placeholder="Password">
                     <label for="editPassword">Password</label>
                 </div>
                 <div class="form-floating mb-3">
@@ -139,18 +139,18 @@
                         <option value="6">DEV</option>
                         <option value="7">BD</option>
                         <option value="8">GM</option>
-                        <option selected value="9">Owner</option>
+                        <option value="9">Owner</option>
                     </select>
                     <label for="editPrivilege">Privilege</label>
                 </div>
                 <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="editTpoints" value="500" placeholder="T-Points">
+                    <input type="text" class="form-control" id="editTpoints" value="0" placeholder="T-Points">
                     <label for="editTpoints">T-Points</label>
                 </div>
             </div>
 
             <div class="modal-footer">
-                <button type="button" class="btn btn-primary" onclick="addUser()">Create</button>
+                <button type="button" class="btn btn-primary">Create</button>
             </div>
         </div>
     </div>
@@ -238,5 +238,21 @@
                 }
             }
         });
+    }
+
+    // Editar conta
+    function editAccount(id){
+        // Carregar dados
+        $.post("account/account_update.php", {id:id}, function(data, status){
+            var account = JSON.parse(data);
+
+            $("#editUsername").val(account.name);
+            $("#editEmail").val(account.email);
+            $("#editPassword").val(account.pwd);
+            $("#editTpoints").val(account.gd);
+            $('#editPrivilege').val(account.pv).change();
+            
+            $("#editAccount").modal('show');
+        })  
     }
 </script>

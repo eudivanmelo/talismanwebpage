@@ -48,7 +48,7 @@ if (isset($_POST['displaySend'])){
                     <td>' . $privilege . '</th>
                     <td>' . $row['gd'] . '</th>
                     <td>
-                        <button type="button" class="btn btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#editAccount">
+                        <button type="button" class="btn btn-sm btn-success" onclick="editAccount(' . $row['accountid'] . ')">
                             Edit
                         </button>
                         <button type="button" class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#deleteAccount">
