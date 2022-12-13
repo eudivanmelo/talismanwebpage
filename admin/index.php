@@ -11,7 +11,7 @@
 <body>
     <!-- accounts list -->
     <div class="content p-5">
-        <div class="card p-1">
+        <div class="card">
             <?php include("account/account_card.php") ?>
         </div>
     </div>

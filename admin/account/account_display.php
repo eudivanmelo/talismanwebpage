@@ -48,9 +48,13 @@ if (isset($_POST['displaySend'])){
                     <td>' . $privilege . '</th>
                     <td>' . $row['gd'] . '</th>
                     <td>
-                        <a class="btn btn-success btn-sm">Edit</a>
-                        <a class="btn btn-danger btn-sm">Delete</a>
-                    </th>
+                        <button type="button" class="btn btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#editAccount">
+                            Edit
+                        </button>
+                        <button type="button" class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#deleteAccount">
+                            Delete
+                        </button>
+                    </td>
                 </tr>';
     }
 }
