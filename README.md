@@ -1,3 +1,4 @@
 # talismanwebpage
 
-- Accounts CRUD (Incomplete)
+- Accounts CRUD (complete)
+- Guilds CRUD (incomplete)
