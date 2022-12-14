@@ -98,7 +98,7 @@ if (isset($_POST['displaySend'])){
     $table = $table . '<!-- pagination -->
                         <div class="row m-0 p-0"> 
                             <div class="col-sm-6" >
-                                <small class=" text-secondary">Total of ' . $count . ' registered accounts</small>
+                                <small class=" text-secondary">Total of ' . $count . ' registered guilds</small>
                             </div>
                             <div class="col-sm-6">
                                 <ul class="pagination pagination-sm justify-content-end">';

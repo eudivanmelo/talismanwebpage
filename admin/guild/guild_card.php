@@ -2,26 +2,27 @@
 <!-- title -->
 <div class="row p-1"> 
     <div class="col-sm-6" >
-        <h5 class="m-1">Accounts</h5>
+        <h5 class="m-1">Guilds</h5>
     </div>
     <div class="col-sm-6 text-end">
         <!-- Button trigger modal -->
-        <button type="button" class="btn btn-sm btn-dark" data-bs-toggle="modal" data-bs-target="#createNewAccount">
-            Create new account
+        <button type="button" disabled class="btn btn-sm btn-dark" data-bs-toggle="modal" data-bs-target="#createNewAccount">
+            Create new guild
         </button>
     </div>
 </div>
 
-<div id="displayData">
+<!-- content -->
+<div id="displayGuilds">
 
 </div>
 
-<!-- Create New Account Modal -->
-<div class="modal fade" id="createNewAccount" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+<!-- Create New Guild Modal -->
+<div class="modal fade" id="createNewGuild" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
         <div class="modal-content">
             <div class="modal-header">
-                <h1 class="modal-title fs-5" id="staticBackdropLabel">CREATE NEW ACCOUNT</h1>
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">CREATE NEW GUILD</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
 
@@ -71,8 +72,8 @@
     </div>
 </div>
 
-<!-- Edit Account Modal -->
-<div class="modal fade" id="editAccount" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+<!-- Edit Guild Modal -->
+<div class="modal fade" id="editGuild" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
         <div class="modal-content">
             <div class="modal-header">
@@ -126,8 +127,8 @@
     </div>
 </div>
 
-<!-- Delete Account Modal -->
-<div class="modal fade" id="deleteAccount" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+<!-- Delete Guild Modal -->
+<div class="modal fade" id="deleteGuild" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
@@ -148,4 +149,4 @@
     </div>
 </div>
 
-<script src="account/js/operations.js"></script>
+<script src="guild/js/operations.js"></script>
